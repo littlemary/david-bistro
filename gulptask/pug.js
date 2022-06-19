@@ -7,7 +7,7 @@ const app = require("../config/app.js");
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
 const pugs = require("gulp-pug"); 
-const webpHtml = require("gulp-webp-html");
+//const webpHtml = require("gulp-webp-html");
 
 // обработка PUG
 const pug = ()=>{
@@ -19,7 +19,7 @@ const pug = ()=>{
         }))
     }))
     .pipe(pugs(app.pug))
-    .pipe(webpHtml())
+  //  .pipe(webpHtml())
     .pipe(dest(path.pug.dest))
 }
 
