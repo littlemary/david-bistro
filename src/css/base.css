@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    color: #fff;
+    background-color: #61122f;
+    font-family: 'Oxygen', sans-serif;
+}
+@import "block/header.css";
+@import "block/footer.css";
+@import "pages/home.css";
+@import "pages/menu-categories.css";
+@import "pages/single-category.css";
+
+
+@import "block/media.css";

@@ -1,0 +1,54 @@
+header
+    nav(id="header-nav" class="navbar navbar-default")
+      div.container
+        div.navbar-header
+          a.pull-left.visible-md.visible-lg(href="index.html")
+            div#logo-img(alt="Logo image")
+          div.navbar-brand
+            a(href="/index.html")
+              h1 David Chou's China Bistro
+            p
+              img(src="img/star-k-logo.png" alt="Kosher certification")
+              span Kosher certificate
+            
+          button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false")
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        div#collapsable-nav.collapse.navbar-collapse
+           ul#nav-list.nav.navbar-nav.navbar-right
+              if active==="menu"
+                li.active 
+                  a(href="menu-categories.html")
+                    span.glyphicon.glyphicon-cutlery 
+                    br.hidden-xs
+                    |Menu
+              else 
+                li
+                  a(href="menu-categories.html")
+                    span.glyphicon.glyphicon-cutlery 
+                    br.hidden-xs
+                    |Menu
+              li 
+                a(href="#")
+                  span.glyphicon.glyphicon-info-sign 
+                  br.hidden-xs 
+                  |About
+              li 
+                a(href="#")
+                  span.glyphicon.glyphicon-certificate 
+                  br.hidden-xs                         
+                  |Awards    
+              li#phone.hidden-xs 
+                a(href="tel:410-602-5008")
+                  span 410-602-5008
+                  div * We Delivery    
+
+//Delivery for mobile version
+div#call-btn.visible-xs 
+  a.btn(href="tel:410-602-5008")
+    span.glyphicon.glyphicon-earphone
+    |410-602-5008
+div#xs-deliver.text-center.visible-xs * We Deliver
+ 

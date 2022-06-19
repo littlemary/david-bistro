@@ -1,0 +1,35 @@
+extends layout/app
+
+block page 
+    - var active="menu"
+    include chunk/header
+
+    div#main-content.container
+        h2#menu-category-title.text-center Soup Menu 
+        div.text-center Lunch is not served until after 1pm.
+        section.row
+            each item, index in category
+                div.menu-item-tile.col-md-6
+                    div.row
+                        div.col-sm-5
+                            div.menu-item-photo
+                                div 
+                                    =item.alt
+                                img.img-responsive(src=item.img width="250" height="150" alt="Item")
+                            div.menu-item-price
+                                =item.price_p
+                                span (pint)
+                                =item.price_q
+                                span (quart) 
+                        div.menu-item-description.col-sm-7
+                            h3.menu-item-title 
+                                =item.name
+                            p.menu-item-details 
+                            =item.desc
+                    hr.visible-xs
+                if index%2==1
+                    div.clearfix.visible-md-block.visible-lg-block
+  
+     
+    include chunk/footer
+    include chunk/js
