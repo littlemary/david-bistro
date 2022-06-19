@@ -18,6 +18,19 @@ header
             span.icon-bar
         div#collapsable-nav.collapse.navbar-collapse
            ul#nav-list.nav.navbar-nav.navbar-right
+              if active==="home"
+                li.active 
+                  a(href="index.html")
+                    span.glyphicon.glyphicon-home 
+                    br.hidden-xs 
+                    |Home
+
+              else 
+                li
+                  a(href="index.html")
+                    span.glyphicon.glyphicon-home 
+                    br.hidden-xs 
+                    |Home
               if active==="menu"
                 li.active 
                   a(href="menu-categories.html")
