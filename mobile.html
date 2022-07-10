@@ -7,7 +7,22 @@
     <title>Document</title>
 </head>
 <body>
+    z orientation
+    <div id="alpha">a</div>
+    x orientation
+    <div id="beta">b</div>
+    y orientation
+    <div id="gamma">g</div>
     <script>
+        window.addEventListener('deviceorientation', (event) => {
+            let alpha = event.alpha;
+            let betta = event.beta;
+            let gamma = event.gamma;
+
+            document.querySelector("#alpha").innerHTML = Math.floor(alpha);
+            document.querySelector("#beta").innerHTML = Math.floor(beta);
+            document.querySelector("#gamma").innerHTML = Math.floor(gamma);
+        });
         navigator.getBattery()
         .then((battery) => {
             alert (`Battery level: ${battery.level*100}%`);
