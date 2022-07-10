@@ -27,11 +27,11 @@
         .then((battery) => {
             alert (`Battery level: ${battery.level*100}%`);
             if (battery.level > 0.7){
-                    document.write(`Your battery is ${battery.level * 100}%. Now you can stop charging it`);
+                  //  document.write(`Your battery is ${battery.level * 100}%. Now you can stop charging it`);
                 }
             battery.addEventListener('levelchanged', (e)=>{
                 if (battery.level > 0.7){
-                    document.write(`Your battery is ${battery.level * 100}%. Now you can stop charging it`);
+                    //document.write(`Your battery is ${battery.level * 100}%. Now you can stop charging it`);
                 }
             });
         });
