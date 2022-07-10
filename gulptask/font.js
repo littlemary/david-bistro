@@ -8,7 +8,9 @@ const app = require("../config/app.js");
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
 const newer = require("gulp-newer");
-const fonter = require("gulp-fonter"); //font convertor
+const fonter = require("gulp-fonter"); 
+const ttf2woff2 = require("gulp-ttf2woff2"); //woff2 convertor//font convertor
+
 
 
 
@@ -24,6 +26,8 @@ const font = ()=>{
     }))
     .pipe(newer(path.font.dest))
     .pipe(fonter(app.fonter))
+    .pipe(dest(path.font.dest))
+    .pipe(ttf2woff2())
     .pipe(dest(path.font.dest));
 }
 

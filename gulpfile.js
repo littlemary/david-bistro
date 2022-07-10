@@ -15,7 +15,7 @@ const server = () =>{
 // Tasks
 const clear = require('./gulptask/clear.js');
 const pug = require('./gulptask/pug.js');
-//const scss = require('./task/scss.js');
+//const scss = require('./gulptask/scss.js');
 const css = require('./gulptask/css.js');
 const js = require('./gulptask/js.js');
 const img = require('./gulptask/img.js');
