@@ -18,42 +18,8 @@ header
             span.icon-bar
         div#collapsable-nav.collapse.navbar-collapse
            ul#nav-list.nav.navbar-nav.navbar-right
-              if active==="home"
-                li.active 
-                  a(href="index.html")
-                    span.glyphicon.glyphicon-home 
-                    br.hidden-xs 
-                    |Home
-
-              else 
-                li
-                  a(href="index.html")
-                    span.glyphicon.glyphicon-home 
-                    br.hidden-xs 
-                    |Home
-              if active==="menu"
-                li.active 
-                  a(href="menu-categories.html")
-                    span.glyphicon.glyphicon-cutlery 
-                    br.hidden-xs
-                    |Menu
-              else 
-                li
-                  a(href="menu-categories.html")
-                    span.glyphicon.glyphicon-cutlery 
-                    br.hidden-xs
-                    |Menu
-              li 
-                a(href="#")
-                  span.glyphicon.glyphicon-info-sign 
-                  br.hidden-xs 
-                  |About
-              li 
-                a(href="#")
-                  span.glyphicon.glyphicon-certificate 
-                  br.hidden-xs                         
-                  |Awards    
-              li#phone.hidden-xs 
+               include menu
+               li#phone.hidden-xs 
                 a(href="tel:410-602-5008")
                   span 410-602-5008
                   div * We Delivery    

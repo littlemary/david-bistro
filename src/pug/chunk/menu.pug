@@ -1,0 +1,37 @@
+-
+  const items = [
+                {
+                  name: 'Home',
+                  link: 'index.html',
+                  icon: '-home',
+                  active: ''
+                },
+                {
+                  name: 'Menu',
+                  link: 'menu-categories.html',
+                  icon: '-cutlery',
+                  active: ''
+                },
+               {
+                  name: 'About',
+                  link: '#',
+                  icon: '-info-sign',
+                  active: ''
+                },
+               {
+                  name: 'Awards',
+                  link: '#',
+                  icon: '-certificate',
+                  active: ''
+                },
+  ];
+  if (active!=undefined){
+    items[active].active = 'active';
+  }
+               
+each val in items
+    li(class=val.active)
+        a(href=val.link)
+            span(class="glyphicon glyphicon"+val.icon)
+            br.hidden-xs 
+            |#{val.name}
