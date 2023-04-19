@@ -6,9 +6,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const message = document.querySelector("#message");
     box.addEventListener('touchstart', (e)=>{
       e.preventDefault();
-      console.log('touchstart');
       message.innerHTML = "Start touch";
-      
+    
     })
 
 })
