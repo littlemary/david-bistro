@@ -7,7 +7,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
     box.addEventListener('touchstart', (e)=>{
       e.preventDefault();
       message.innerHTML = "Start touch";
-    
-    })
+    });
+    box.addEventListener('touchmove', (e)=>{
+      e.preventDefault();
+      message.innerHTML = "Touch Move";
+    });
+    box.addEventListener('touchend', (e)=>{
+      e.preventDefault();
+      message.innerHTML = "End touch";
+    });
 
 })
