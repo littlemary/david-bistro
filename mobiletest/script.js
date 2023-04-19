@@ -1,3 +1,14 @@
 "use strict";
 
-console.log('My mobile application');
+document.addEventListener("DOMContentLoaded", ()=>{
+
+    const box = document.querySelector(".touchbox");
+    const message = document.querySelector("#message");
+    box.addEventListener('touchstart', (e)=>{
+      e.preventDefault();
+      console.log('touchstart');
+      message.innerHTML = "Start touch";
+      
+    })
+
+})
